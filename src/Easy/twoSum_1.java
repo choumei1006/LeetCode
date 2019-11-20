@@ -10,7 +10,7 @@ public class twoSum_1 {
     public static void main(String[] args) {
         int[] nums = new int[]{2,7,11,15};
         int target = 9;
-        int[] result = twoSum(nums,target);
+        int[] result = twoSum(nums,9);
         for (int i = 0; i <result.length ; i++) {
             System.out.println(result[i]);
         }
