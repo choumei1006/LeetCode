@@ -22,7 +22,9 @@ package Easy;
  */
 public class isPalindrome_9 {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(-12321));
+
+        //System.out.println(isPalindrome(-12321));
+        System.out.println(isPalindromePro(12321));
     }
     public static boolean isPalindrome(int num){
         Integer number = num;
@@ -47,5 +49,19 @@ public class isPalindrome_9 {
     /**
      * 进阶:
      * 你能不将整数转为字符串来解决这个问题吗？
+     * 指点迷津：官方题解
+     * 1、不用转换为字符串处理，节省了额外的空间消耗；
+     * 2、通过数字大小判断是否已经达到一半，避免了溢出问题；
+     * 3、三目运算符解决了奇偶位数的分支情况处理；
      */
+
+    public static boolean isPalindromePro(int x){
+        if(x < 0 || ( x % 10 == 0 && x != 0)) return false;
+        int revertedNumber = 0;
+        while(x > revertedNumber){
+            revertedNumber = revertedNumber * 10 + x % 10;
+            x /= 10;
+        }
+        return revertedNumber == x || revertedNumber/10 == x;
+    }
 }
