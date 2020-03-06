@@ -9,7 +9,7 @@ package Hard;
  */
 public class medianOfSortedArrays_4 {
     public static void main(String[] args) {
-        int[] nums1 = {1,2};
+        int[] nums1 = {1,2,5,7,9};
         int[] nums2 = {3,4};
         System.out.println(medianOfSortedArrays(nums1,nums2));
 
